@@ -1,14 +1,18 @@
-import { exampleRouter } from "~/server/api/routers/example";
 import { createTRPCRouter } from "~/server/api/trpc";
+import { bankAccountRouter } from "./routers/bank-account";
+import { expenseTypeRouter } from "./routers/expense-type";
+import { expenseCategoryRouter } from "./routers/expense-category";
+import { incomeRouter } from "./routers/income";
+import { paymentMethodRouter } from "./routers/payment-method";
+import { expenseRouter } from "./routers/expense";
 
-/**
- * This is the primary router for your server.
- *
- * All routers added in /api/routers should be manually added here.
- */
 export const appRouter = createTRPCRouter({
-  example: exampleRouter,
+  bankAccount: bankAccountRouter,
+  expense: expenseRouter,
+  expenseCategory: expenseCategoryRouter,
+  expenseType: expenseTypeRouter,
+  income: incomeRouter,
+  paymentMethod: paymentMethodRouter,
 });
 
-// export type definition of API
 export type AppRouter = typeof appRouter;
