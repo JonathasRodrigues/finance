@@ -37,10 +37,10 @@ import { InputCurrency } from "~/components/ui/input-currency";
 
 interface FormValuesType {
   name: string;
-  value: number | undefined;
+  value: number;
   dueDate: Date;
-  currentInstallment?: number | undefined;
-  totalInstallment: number | undefined;
+  currentInstallment?: number;
+  totalInstallment: number;
 }
 
 export function InstallmentExpenseForm({

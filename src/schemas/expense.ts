@@ -12,8 +12,8 @@ export const expenseSchema = z.object({
   paymentMethodId: z.string({ required_error: "Payment Method is required" }),
   typeId: z.string({ required_error: "Type is required" }),
   categoryId: z.string({ required_error: "Category is required" }),
-  currentInstallment: z.number().nullable().default(0),
-  totalInstallment: z.number().nullable().default(0),
+  currentInstallment: z.number().default(0),
+  totalInstallment: z.number().default(0),
 });
 
 export const listExpenseSchema = z.object({
