@@ -15,3 +15,5 @@ export default function Expenses() {
     </div>
   );
 }
+
+Expenses.auth = true;

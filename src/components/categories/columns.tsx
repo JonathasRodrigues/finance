@@ -12,11 +12,17 @@ import {
 } from "~/components/ui/dropdown-menu";
 import { DotsHorizontalIcon } from "@radix-ui/react-icons";
 import { Button } from "~/components/ui/button";
+import { DataTableColumnHeader } from "../ui/data-table-column-header";
 
 export const columns: ColumnDef<ExpenseCategoryType>[] = [
   {
+    id: "name",
     accessorKey: "name",
-    header: "Category",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Category" />
+    ),
+    enableSorting: true,
+    enableHiding: false,
   },
   {
     id: "actions",

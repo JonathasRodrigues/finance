@@ -70,20 +70,6 @@ export default function Menu() {
             <MenubarTrigger>{i.name}</MenubarTrigger>
             <MenubarContent>
               {i.children?.map((c) => {
-                // if (c.children) {
-                //   return (
-                //     <MenubarSub key={c.name}>
-                //       <MenubarSubTrigger>{c.name}</MenubarSubTrigger>
-                //       <MenubarSubContent>
-                //         {c.children.map((ch) => (
-                //           <Link href={ch.path} key={ch.name}>
-                //             <MenubarItem>{ch.name}</MenubarItem>
-                //           </Link>
-                //         ))}
-                //       </MenubarSubContent>
-                //     </MenubarSub>
-                //   );
-                // }
                 return (
                   <Link href={c.path} key={c.name}>
                     <MenubarItem>{c.name}</MenubarItem>

@@ -17,10 +17,17 @@ import { DataTableColumnHeader } from "../ui/data-table-column-header";
 
 export const columns: ColumnDef<BankAccountType>[] = [
   {
+    id: "name",
     accessorKey: "name",
-    header: "Bank account",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Bank account" />
+    ),
+    enableSorting: true,
+    enableHiding: false,
   },
+
   {
+    id: "balance",
     accessorKey: "balance",
     header: ({ column }) => (
       <DataTableColumnHeader
@@ -34,6 +41,8 @@ export const columns: ColumnDef<BankAccountType>[] = [
       const formatted = currencyFormat(balance);
       return <div className="text-right font-medium">{formatted}</div>;
     },
+    enableSorting: true,
+    enableHiding: false,
   },
   {
     id: "actions",

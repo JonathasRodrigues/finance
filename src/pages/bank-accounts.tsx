@@ -3,7 +3,7 @@
 import { DialogBankAccountForm } from "~/components/bank-accounts/dialog-form";
 import TableBankAccounts from "../components/bank-accounts/table";
 
-export default function BankAccountPage() {
+export default function BankAccounts() {
   return (
     <div className="grid grid-cols-6 gap-4">
       <div className="col-end-7">
@@ -15,3 +15,5 @@ export default function BankAccountPage() {
     </div>
   );
 }
+
+BankAccounts.auth = true;

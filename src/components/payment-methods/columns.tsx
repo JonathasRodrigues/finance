@@ -16,16 +16,22 @@ import { DataTableColumnHeader } from "../ui/data-table-column-header";
 
 export const columns: ColumnDef<ExpenseCategoryType>[] = [
   {
+    id: "name",
     accessorKey: "name",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Payment method" />
     ),
+    enableSorting: true,
+    enableHiding: false,
   },
   {
+    id: "bankAccount.name",
     accessorKey: "bankAccount.name",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Bank account" />
     ),
+    enableSorting: true,
+    enableHiding: false,
   },
   {
     id: "actions",

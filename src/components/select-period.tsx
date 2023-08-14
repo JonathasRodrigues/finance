@@ -6,9 +6,13 @@ import {
   SelectValue,
 } from "~/components/ui/select";
 import useAppContext from "./app-provider";
+import { useSession } from "next-auth/react";
 
 export function SelectPeriod() {
+  const { data: session } = useSession();
   const { year, month, setMonth, setYear } = useAppContext();
+
+  if (!session) return null;
   return (
     <div className="flex space-x-4">
       <Select value={month} onValueChange={(e) => setMonth(e)}>

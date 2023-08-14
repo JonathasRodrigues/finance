@@ -9,7 +9,7 @@ export default function TableBankAccounts() {
 
   return (
     <>
-      <DataTable columns={columns} data={listBankAccounts} />
+      <DataTable columns={columns} data={listBankAccounts} pagination />
     </>
   );
 }

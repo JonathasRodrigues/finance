@@ -15,3 +15,5 @@ export default function CategoryPage() {
     </div>
   );
 }
+
+CategoryPage.auth = true;

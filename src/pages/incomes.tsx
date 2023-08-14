@@ -15,3 +15,5 @@ export default function Incomes() {
     </div>
   );
 }
+
+Incomes.auth = true;

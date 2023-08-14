@@ -10,12 +10,7 @@ export default function TablePaymentMethods() {
 
   return (
     <>
-      <DataTable columns={columns} data={listPaymentMethods} />
-      <div className="flex items-center justify-end space-x-2 py-4">
-        <div className="flex-1 text-sm text-muted-foreground">
-          Total of {listPaymentMethods.length} payment method(s)
-        </div>
-      </div>
+      <DataTable columns={columns} data={listPaymentMethods} pagination />
     </>
   );
 }

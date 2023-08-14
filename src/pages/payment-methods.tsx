@@ -3,7 +3,7 @@
 import { DialogPaymentMethodForm } from "~/components/payment-methods/dialog-form";
 import TablePaymentMethods from "~/components/payment-methods/table";
 
-export default function PaymentMethodPage() {
+export default function PaymentMethods() {
   return (
     <div className="grid grid-cols-6 gap-4">
       <div className="col-end-7">
@@ -15,3 +15,5 @@ export default function PaymentMethodPage() {
     </div>
   );
 }
+
+PaymentMethods.auth = true;
