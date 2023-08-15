@@ -21,6 +21,7 @@ export default function TableIncomes() {
         data={listIncomes}
         loading={incomes.isLoading}
         filter={{ searchFieldName: "name" }}
+        pagination
       />
     </>
   );

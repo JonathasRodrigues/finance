@@ -47,7 +47,7 @@ export default function RootLayout({
                 <SelectPeriod />
                 <ThemeMode />
               </div>
-              {children}
+              <div className="min-w-[840px] max-w-[840px]">{children}</div>
             </div>
           </main>
         </AppContext.Provider>

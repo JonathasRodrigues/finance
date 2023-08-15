@@ -17,7 +17,7 @@ export function DialogIncomeForm() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button className="w-[100%]">New income</Button>
+        <Button className="w-[100%]">New</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

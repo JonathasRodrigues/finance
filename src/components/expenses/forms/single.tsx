@@ -87,7 +87,7 @@ export function SingleExpenseForm({
             <FormItem>
               <FormLabel>Expense</FormLabel>
               <FormControl>
-                <Input placeholder="Salary" {...field} />
+                <Input placeholder="Clothes" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

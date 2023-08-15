@@ -89,7 +89,7 @@ export function InstallmentExpenseForm({
             <FormItem>
               <FormLabel>Expense</FormLabel>
               <FormControl>
-                <Input placeholder="Salary" {...field} />
+                <Input placeholder="Netflix" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

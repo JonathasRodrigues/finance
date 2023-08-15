@@ -19,7 +19,7 @@ export function DialogExpenseForm() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button className="w-[100%]">New expense</Button>
+        <Button className="w-[100%]">New</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

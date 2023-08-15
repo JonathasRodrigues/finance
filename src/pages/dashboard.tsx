@@ -3,7 +3,7 @@ import IncomeCard from "~/components/dashboard/income-card";
 
 export default function Dashboard() {
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid gap-4">
       <ExpenseCard />
       <IncomeCard />
     </div>

@@ -18,7 +18,7 @@ export function DialogCategoryForm() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button className="w-[100%]" onClick={() => setOpen(true)}>
-          New category
+          New
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
