@@ -119,6 +119,7 @@ export function InstallmentExpenseForm({
                   type="number"
                   placeholder="12"
                   {...field}
+                  value={field.value ?? 0}
                   onChange={(e) => {
                     field.onChange(e.target.valueAsNumber);
                   }}
