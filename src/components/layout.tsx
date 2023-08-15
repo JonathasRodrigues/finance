@@ -6,6 +6,7 @@ import { SelectPeriod } from "./select-period";
 import { AppContext } from "./app-provider";
 import { useCallback, useState } from "react";
 import { getMonth, getYear } from "date-fns";
+import AuthButton from "./auth-button";
 
 export default function RootLayout({
   children,
@@ -46,8 +47,11 @@ export default function RootLayout({
                 <Menu />
                 <SelectPeriod />
                 <ThemeMode />
+                <AuthButton />
               </div>
-              <div className="min-w-[840px] max-w-[840px]">{children}</div>
+              <div className="flex min-w-[840px] max-w-[840px] items-center justify-center">
+                {children}
+              </div>
             </div>
           </main>
         </AppContext.Provider>

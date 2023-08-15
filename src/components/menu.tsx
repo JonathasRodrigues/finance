@@ -1,11 +1,9 @@
-import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import {
   Menubar,
   MenubarContent,
   MenubarItem,
   MenubarMenu,
-  MenubarSeparator,
   MenubarTrigger,
 } from "~/components/ui/menubar";
 
@@ -51,7 +49,6 @@ const menuItems = [
 ];
 
 export default function Menu() {
-  const { data: sessionData } = useSession();
   return (
     <Menubar>
       {menuItems.map((i) => {
@@ -80,19 +77,6 @@ export default function Menu() {
           </MenubarMenu>
         );
       })}
-
-      <MenubarMenu>
-        <MenubarTrigger>Profile</MenubarTrigger>
-        <MenubarContent>
-          {sessionData && <MenubarItem>{sessionData.user?.name}</MenubarItem>}
-          <MenubarSeparator />
-          <MenubarItem
-            onClick={sessionData ? () => void signOut() : () => void signIn()}
-          >
-            {sessionData ? "Sign out" : "Sign in"}
-          </MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
     </Menubar>
   );
 }
