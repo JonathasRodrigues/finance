@@ -1,18 +1,18 @@
 "use client";
 
+import PageContent from "~/components/page-content";
 import { DialogPaymentMethodForm } from "~/components/payment-methods/dialog-form";
 import TablePaymentMethods from "~/components/payment-methods/table";
 
 export default function PaymentMethods() {
   return (
-    <div className="grid grid-cols-6 gap-4">
-      <div className="col-end-7">
-        <DialogPaymentMethodForm />
-      </div>
-      <div className="col-start-1 col-end-7">
-        <TablePaymentMethods />
-      </div>
-    </div>
+    <PageContent
+      title="Payment Methods"
+      subtitle="List of your payment methods (credit card, pix, etc)"
+      headerRight={<DialogPaymentMethodForm />}
+    >
+      <TablePaymentMethods />
+    </PageContent>
   );
 }
 

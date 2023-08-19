@@ -3,20 +3,20 @@ import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import { api } from "~/utils/api";
 import { currencyFormat } from "~/utils/formatter";
 
-export default function IncomeCard() {
+export default function InstallmentCard() {
   const { getStartDate, getEndDate } = useAppContext();
 
-  const totalIncomes = api.income.getTotalValue.useQuery({
+  const totalExpenses = api.expense.getTotalInstallmentValue.useQuery({
     startDate: getStartDate(),
     endDate: getEndDate(),
   });
 
-  const incomeValue = totalIncomes.data?._sum?.value ?? 0;
+  const expenseValue = totalExpenses.data?._sum?.value ?? 0;
 
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-        <CardTitle className="text-sm font-medium">Incomes</CardTitle>
+        <CardTitle className="text-sm font-medium">Installments</CardTitle>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -27,14 +27,13 @@ export default function IncomeCard() {
           strokeWidth="2"
           className="h-4 w-4 text-muted-foreground"
         >
-          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-          <circle cx="9" cy="7" r="4" />
-          <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+          <rect width="20" height="14" x="2" y="5" rx="2" />
+          <path d="M2 10h20" />
         </svg>
       </CardHeader>
       <CardContent>
-        <div className="text-2xl font-bold">{currencyFormat(incomeValue)}</div>
-        {/* <p className="text-xs text-muted-foreground">+180.1% from last month</p> */}
+        <div className="text-2xl font-bold">{currencyFormat(expenseValue)}</div>
+        {/* <p className="text-xs text-muted-foreground">+19% from last month</p> */}
       </CardContent>
     </Card>
   );

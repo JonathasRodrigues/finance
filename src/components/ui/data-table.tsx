@@ -36,6 +36,7 @@ interface DataTableProps<TData, TValue> {
   data: TData[];
   loading?: boolean;
   pagination?: boolean;
+  footer?: React.ReactElement;
   filter?: { select?: DataTableToolbarType[]; searchFieldName?: string };
 }
 

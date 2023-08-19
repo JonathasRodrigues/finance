@@ -2,17 +2,18 @@
 
 import { DialogExpenseForm } from "~/components/expenses/dialog-form";
 import TableExpenses from "~/components/expenses/table";
+import PageContent from "~/components/page-content";
 
 export default function Expenses() {
   return (
-    <div className="grid grid-cols-6 gap-4">
-      <div className="col-end-7">
-        <DialogExpenseForm />
-      </div>
-      <div className="col-start-1 col-end-7">
-        <TableExpenses />
-      </div>
-    </div>
+    <PageContent
+      title="Expenses"
+      subtitle="List of your expenses."
+      periodFilter
+      headerRight={<DialogExpenseForm />}
+    >
+      <TableExpenses />
+    </PageContent>
   );
 }
 

@@ -2,7 +2,6 @@ import Head from "next/head";
 import Menu from "~/components/menu";
 import { ThemeProvider } from "./theme-provider";
 import { ThemeMode } from "./theme-mode";
-import { SelectPeriod } from "./select-period";
 import { AppContext } from "./app-provider";
 import { useCallback, useState } from "react";
 import { getMonth, getYear } from "date-fns";
@@ -45,11 +44,10 @@ export default function RootLayout({
             <div className="container flex flex-col items-center justify-center gap-12 px-16 py-16">
               <div className="flex gap-4">
                 <Menu />
-                <SelectPeriod />
                 <ThemeMode />
                 <AuthButton />
               </div>
-              <div className="flex min-w-[840px] max-w-[840px] items-center justify-center">
+              <div className="flex max-w-[840px] items-center justify-center">
                 {children}
               </div>
             </div>

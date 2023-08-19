@@ -14,19 +14,12 @@ const menuItems = [
     name: "Dashboard",
     path: "/dashboard",
   },
+  { name: "Expenses", path: "/expenses" },
   {
-    name: "Finance",
-    children: [
-      {
-        name: "Expenses",
-        path: "/expenses",
-      },
-      {
-        name: "Incomes",
-        path: "/incomes",
-      },
-    ],
+    name: "Incomes",
+    path: "/incomes",
   },
+
   {
     name: "Settings",
     children: [

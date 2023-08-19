@@ -4,6 +4,7 @@ import { DataTable } from "~/components/ui/data-table";
 import { columns } from "./columns";
 import { api } from "~/utils/api";
 import useAppContext from "~/components/app-provider";
+import { currencyFormat } from "~/utils/formatter";
 export default function TableIncomes() {
   const { getStartDate, getEndDate } = useAppContext();
 
