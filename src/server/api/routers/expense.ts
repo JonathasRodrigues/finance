@@ -33,7 +33,7 @@ export const expenseRouter = createTRPCRouter({
       const expense = input;
       const totalInstallment = expense?.totalInstallment ?? 0;
       const expenses = [];
-      for (let i = 0; i <= totalInstallment; i++) {
+      for (let i = 0; i < totalInstallment; i++) {
         const pEx = { ...expense, ...{ userId: ctx.session.user.id } };
         pEx.dueDate = addMonths(expense.dueDate, i);
         pEx.currentInstallment = i + 1;
